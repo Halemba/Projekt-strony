@@ -1,0 +1,152 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    overflow-y: scroll;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+:root 
+{
+    --c1: rgb(53, 53, 53); /*    Czcionka używana do nagłówka oraz elementów klasy active    */
+    --c2: #282828; /*                   Czcionka używana do tła menu                 */
+    --c3:  rgb(70, 66, 66);/*                   Czcionka używana do tła                   */
+}
+
+/* #test
+{
+    background-color: var(--c3);
+} */
+#test 
+{
+    background-color: var(--c3);
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+#banner
+{
+    width: 100%;
+    height: 150px;
+    background-color: var(--c1);
+}
+#banner h1
+{
+    color: white;
+    text-align: center;
+    line-height: 150px;
+}
+
+/* #menu
+{
+    width: 16%;
+    background-color: var(--c2);
+    float: left;
+} */
+#menu 
+{
+    width: 16%;
+    background-color: var(--c2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100px;
+}
+#menu ul
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    
+}
+/* #menu li
+{
+    
+    background-color: var(--c2);
+    text-align: center;
+    font-size: 20px;
+    display: block;
+} */
+#menu li 
+{
+    background-color: var(--c2);
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    line-height: initial;
+}
+#menu li:hover
+{
+    background-color: var(--c1);
+    cursor: pointer;
+    font-size: 22px;
+    transition: font-size .2s;
+}
+/* #menu a
+{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 60px;
+    width: 70%;
+} */
+/* #menu a 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+} */
+#menu a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 15px;
+    width: 70%;
+}
+#menu .active
+{
+    background-color: var(--c1);
+}
+
+#content
+{
+    width: 84%;
+    height: 100%;
+    background-color: var(--c3);
+    float: left;
+    color: white;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+#contentHeader
+{
+    -webkit-text-stroke: 1px black;
+}
+#content p
+{
+    font-size: 20px;
+}
+a
+{
+    color: white;
+}
+
+/* -----------------------  STRONA GŁÓWNA ---------------------------- */
