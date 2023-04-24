@@ -13,8 +13,8 @@ body
 :root 
 {
     --c1: rgb(53, 53, 53); /*    Czcionka używana do nagłówka oraz elementów klasy active    */
-    --c2: #282828; /*                   Czcionka używana do tła menu                 */
-    --c3:  rgb(70, 66, 66);/*                   Czcionka używana do tła                   */
+    --c2: #282828;         /*                Czcionka używana do tła menu                   */
+    --c3:  rgb(70, 66, 66);/*                   Czcionka używana do tła                    */
 }
 
 /* #test
@@ -91,8 +91,7 @@ body
 {
     background-color: var(--c1);
     cursor: pointer;
-    font-size: 22px;
-    transition: font-size .2s;
+    transition: background-color .1s;
 }
 /* #menu a
 {
@@ -113,7 +112,8 @@ body
     text-decoration: none;
     list-style-type: none;
 } */
-#menu a {
+#menu a 
+{
     color: white;
     text-decoration: none;
     list-style-type: none;
@@ -148,5 +148,30 @@ a
 {
     color: white;
 }
+
+@media only screen and (max-width: 1350px) {
+    #menu
+    {   
+        height: 150px;
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    li
+    {
+        display: block;
+        float: left;
+    }
+}
+/* @media only screen and (min-width: 1350px) {
+    #menu{
+        width: 10%;
+        float: left;
+    }
+    #content{
+        width: 89.7%;
+        float: left;
+    }
+} */
 
 /* -----------------------  STRONA GŁÓWNA ---------------------------- */
