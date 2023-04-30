@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Wzorce projektowe</title>
 </head>
 <body>
@@ -24,8 +25,73 @@
 
         <div id="content">
             <center><h1 id = "contentHeader">Wzorce projektowe</h1></center><br>
+
+            <h2>W skrócie . . . </h2>
+            <p>Wzorce projektowe to sprawdzone, powtarzalne i ustandaryzowane rozwiązania problemów, które mogą pojawić się podczas projektowania oprogramowania. Są to pewnego rodzaju szablony, które programiści stosują, aby rozwiązywać konkretne problemy projektowe w sposób efektywny i zgodny z najlepszymi praktykami.</p><br>
+
+            <p>Wzorce projektowe są uważane za dobre praktyki projektowania oprogramowania, ponieważ opierają się na doświadczeniach wielu programistów i zostały przetestowane w praktyce. Pozwala to na osiąganie lepszej jakości kodu, zwiększenie czytelności i łatwości utrzymania kodu, a także na zmniejszenie ryzyka popełnienia błędów.</p><br><br>
+
+            <h2>Gang czworga . . . </h2>
+            <p>Gang Czworga (ang. Gang of Four, w skrócie GoF) to grupa autorów książki "Design Patterns: Elements of Reusable Object-Oriented Software" (pol. "Wzorce projektowe: Elementy oprogramowania obiektowego wielokrotnego użytku"). Książka ta została opublikowana w 1994 roku i jest uważana za jedną z najważniejszych publikacji na temat wzorców projektowych w programowaniu obiektowym.</p><br>
+            <p>Grupa GoF składała się z czterech autorów: Ericha Gamma, Richarda Helma, Ralpha Johnsona i Johna Vlissidesa. Byli oni ekspertami w dziedzinie programowania obiektowego i mieli duże doświadczenie w tworzeniu oprogramowania. W swojej książce przedstawili 23 wzorce projektowe, które mogą być stosowane w projektowaniu oprogramowania obiektowego.</p><br>
+            <p>Wzorce projektowe GoF stały się bardzo popularne w świecie programowania i są często wykorzystywane przez programistów w różnych językach programowania. Książka "Design Patterns" uważana jest za klasykę w dziedzinie wzorców projektowych i jest nadal powszechnie czytana i cytowana w literaturze programistycznej.</p><br><br>
+
+            <center>
+                <p id="name">Erich Gamma</p>
+            <img src="Gallery/img0.jpg" id="big"><br>
+            <img src="Gallery/img0.jpg" id="img0" class="small">
+            <img src="Gallery/img1.jpg" id="img1" class="small">
+            <img src="Gallery/img2.jpg" id="img2" class="small">
+            <img src="Gallery/img3.png" id="img3" class="small">
+            </center>
         </div>
     </div>
         
 </body>
 </html>
+
+<script>
+$(document).ready(function()
+    {
+        let big = $("#big");
+        let name = $("#name");
+        
+        $("#img0").css("opacity", "1");
+
+        // $("#img0").click(function() {big.src = $("#img0").src});
+        // $("#img1").click(function() {big.src = $("#img1").src});
+        // $("#img2").click(function() {big.src = $("#img2").src});
+        // $("#img3").click(function() {big.src = $("#img3").src});
+
+        $("#img0").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img0").attr('src'));  name.text("Erich Gamma");  $("#img0").css("opacity", "1")});
+        $("#img1").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img1").attr('src'));  name.text("John Vlissides");  $("#img1").css("opacity", "1")});
+        $("#img2").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img2").attr('src'));  name.text("Ralph Johnson");  $("#img2").css("opacity", "1")});
+        $("#img3").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img3").attr('src'));  name.text("Richard Helm (Zdjęcie nie jest dostępne na internecie)");  $("#img3").css("opacity", "1")});
+    })
+
+</script>
+
+<style>
+    #big
+    {
+        height: 400px;
+        border: 2px solid black;
+    }
+
+    .small
+    {
+        height: 75px;
+        opacity: 0.3;
+    }
+    .small:hover
+    {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    #name
+    {
+        font-size: 20px;
+        padding: 5px;
+    }
+</style>
