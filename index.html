@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Repozytorium Git</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Strona główna</title>
 </head>
 <body>
     <div id = "banner">
@@ -15,7 +16,7 @@
     <div id = "test">
         <div id="menu">
             <ul>
-                <a href="index.html"><li class = "active">Strona główna</li></a>
+                <a class = "active" href="index.html"><li>Strona główna</li></a>
                 <a href="repozytorium.html"><li>Repozytorium Git</li></a>
                 <a href="techniki.html"><li>Techniki zwinne</li></a>
                 <a href="wzorce.html"><li>Wzorce projektowe</li></a>
@@ -27,7 +28,14 @@
             <h2>O stronie . . .</h2>
             <p>Proces tworzenia oprogramowania jest bardzo skomplikowany i wymaga od programistów ogromnej wiedzy, umiejętności i doświadczenia. Właśnie dlatego, na tej stronie zawarte są informacje skupiające się na omówieniu najważniejszych narzędzi i technik, które ułatwiają ten proces.</p><br>
             <p>Znajdziesz tu informacje między innymi o systemie kontroli wersji jakim jest Git, a także o GitHubie. Ponadto poznasz kilka podstawowych i najbardziej przydatnych poleceń i ich działanie oraz dowiesz się dlaczego GitHub jest aż tak przydatny w życiu codziennym programisty.</p><br>
-            <p>Jest tu także wyjaśnienie pojęcia metodyk zwinnych i na czym one polegają. Wypisane są też ich przykłady z mniej lub bardziej szczegółowym objaśnieniem.</p>
+            <p>Jest tu także wyjaśnienie pojęcia metodyk zwinnych i na czym one polegają. Wypisane są też ich przykłady z mniej lub bardziej szczegółowym objaśnieniem.</p><br>
+            <center><br><br>
+            <img src="Gallery/imgWP.png" id="big"><br>
+            <img src="Gallery/imgWP.png" id="img0" class="small">
+            <img src="Gallery/Git-Logo-2Color.png" id="img1" class="small">
+            <img src="Gallery/GitHub-Logo.png" id="img2" class="small">
+            <img src="Gallery/imgTZ.jpg" id="img3" class="small">
+            </center><br><br>
         </div>
     </div>
         
@@ -40,3 +48,24 @@
         height: 200px;
     }
 </style>
+
+<script>
+    $(document).ready(function()
+        {
+            let big = $("#big");
+            let name = $("#name");
+            
+            $("#img0").css("opacity", "1");
+    
+            // $("#img0").click(function() {big.src = $("#img0").src});
+            // $("#img1").click(function() {big.src = $("#img1").src});
+            // $("#img2").click(function() {big.src = $("#img2").src});
+            // $("#img3").click(function() {big.src = $("#img3").src});
+    
+            $("#img0").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img0").attr('src'));  name.text("Erich Gamma");  $("#img0").css("opacity", "1")});
+            $("#img1").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img1").attr('src'));  name.text("John Vlissides");  $("#img1").css("opacity", "1")});
+            $("#img2").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img2").attr('src'));  name.text("Ralph Johnson");  $("#img2").css("opacity", "1")});
+            $("#img3").click(function() { $(".small").css("opacity", "0.3");  big.attr('src', $("#img3").attr('src'));  name.text("Richard Helm (Zdjęcie nie jest dostępne na internecie)");  $("#img3").css("opacity", "1")});
+        })
+    
+    </script>

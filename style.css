@@ -16,17 +16,13 @@ body
     --c2: #282828;         /*                Czcionka używana do tła menu                   */
     --c3:  rgb(70, 66, 66);/*                   Czcionka używana do tła                    */
 }
-
-/* #test
-{
-    background-color: var(--c3);
-} */
 #test 
 {
     background-color: var(--c3);
     display: flex;
     flex-direction: row;
-    height: auto;
+    min-height: 100vh;
+    width: 100%;
 }
 
 #banner
@@ -41,13 +37,6 @@ body
     text-align: center;
     line-height: 150px;
 }
-
-/* #menu
-{
-    width: 16%;
-    background-color: var(--c2);
-    float: left;
-} */
 #menu 
 {
     width: 16%;
@@ -57,68 +46,46 @@ body
     justify-content: flex-start;
     align-items: center;
     min-height: 100px;
+    position: sticky;
+    top: 0;
 }
 #menu ul
 {
     margin: 0;
     padding: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     position: sticky;
     top: 0;
-    
 }
-/* #menu li
-{
-    
-    background-color: var(--c2);
-    text-align: center;
-    font-size: 20px;
-    display: block;
-} */
 #menu li 
 {
-    background-color: var(--c2);
     text-align: center;
     font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     line-height: initial;
 }
-#menu li:hover
-{
-    background-color: var(--c1);
-    cursor: pointer;
-    transition: background-color .1s;
-}
-/* #menu a
-{
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
-    line-height: 60px;
-    width: 70%;
-} */
-/* #menu a 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
-} */
 #menu a 
 {
     color: white;
     text-decoration: none;
     list-style-type: none;
     line-height: 15px;
-    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+}
+#menu a:hover
+{
+    background-color: var(--c1);
+    cursor: pointer;
+    transition: background-color .1s;
 }
 #menu .active
 {
@@ -149,18 +116,105 @@ a
     color: white;
 }
 
-@media only screen and (max-width: 1350px) {
+    #big
+    {
+        height: 400px;
+        border: 2px solid black;
+        margin: 5px;
+    }
+
+    .small
+    {
+        height: 75px;
+        opacity: 0.3;
+        margin: 10px;
+    }
+    .small:hover
+    {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    #name
+    {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    #p1
+    {
+        width: 50%;
+        border: 2px solid black;
+    }
+
+    #logoGit, #logoGitHub
+    {
+        width: 400px;
+    }
+
+@media only screen and (max-width: 900px) {
     #menu
     {   
-        height: 150px;
-        display: block;
+        height: auto;
         float: left;
         width: 100%;
+        margin: 0;
+        flex-direction: row;
+        align-items: normal;
     }
-    li
+
+    #menu ul 
     {
-        display: block;
-        float: left;
+        flex-direction: row;
+    }
+
+    #menu a
+    {
+        padding: 19px;
+        height: 100%;
+        text-align: center;
+    }
+    #menu a:hover
+    {
+        height: 100%;
+    }
+
+    #content 
+    {
+        width: 100%;
+    }
+
+    #test 
+    {
+        flex-direction: column;
+    }
+
+    #menu .active
+    {
+        margin: 0;
+        height: 100%;
+    }
+
+    #big
+    {
+        height: 200px;
+        border: 2px solid black;
+    }
+
+    #p1 
+    {
+        width: 100%;
+    }
+
+    .small
+    {
+        height: 45px;
+        opacity: 0.3;
+    }
+
+    #logoGit, #logoGitHub
+    {
+        width: 300px;
     }
 }
 /* @media only screen and (min-width: 1350px) {

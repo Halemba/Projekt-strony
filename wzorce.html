@@ -16,10 +16,10 @@
     <div id = "test">
         <div id="menu">
             <ul>
-                <a href="index.html"><li class = "active">Strona główna</li></a>
+                <a href="index.html"><li>Strona główna</li></a>
                 <a href="repozytorium.html"><li>Repozytorium Git</li></a>
                 <a href="techniki.html"><li>Techniki zwinne</li></a>
-                <a href="wzorce.html"><li class="active">Wzorce projektowe</li></a>
+                <a class="active" href="wzorce.html"><li>Wzorce projektowe</li></a>
             </ul>
         </div>
 
@@ -43,7 +43,17 @@
             <img src="Gallery/img1.jpg" id="img1" class="small">
             <img src="Gallery/img2.jpg" id="img2" class="small">
             <img src="Gallery/img3.png" id="img3" class="small">
-            </center>
+            </center><br><br>
+
+            <h2>Klasyfikacja wzorców projektowych . . . </h2>
+            <p>• Wzorce kreacyjne - służą do tworzenia obiektów w elastyczny sposób przez re-używalny kod.</p>
+            <p>• Wzorce Strukturalne - służą do zdefiniowania referencji pomiędzy obiektami tak aby nasz kod był jak najbardziej rozszerzalny </p>
+            <p>• Wzorce behawioralne - zajmują się one komunikacją oraz podziałem odpowiedzialności pomiędzy obiektami </p><br><br>
+
+            <h2>Przykłady wzorców projektowych . . . </h2>
+            <p>• Fabryka - jest jednym z najczęściej stosowanych wzorców projektowych w programowaniu obiektowym. Służy do tworzenia obiektów bez bezpośredniego wywoływania ich konstruktorów, co umożliwia bardziej elastyczne zarządzanie procesem tworzenia obiektów. Zadaniem fabryki jest zwrócenie gotowego obiektu lub jego interfejsu na podstawie przekazanych parametrów wejściowych. Dzięki temu wzorzec fabryki pomaga w uniknięciu powtarzalnego kodu i ułatwia modyfikacje aplikacji w przyszłości.</p>
+            <p>• Strategia - pozwala na wybór jednej z wielu strategii działania w zależności od określonych warunków. Strategia polega na odseparowaniu algorytmu od obiektu, na którym ten algorytm jest wykonywany, co umożliwia łatwe zmienianie strategii bez konieczności modyfikacji samego obiektu. Dzięki temu, obiekty korzystające z różnych strategii zachowują swoją niezależność i mogą być łatwo modyfikowane lub dodawane nowe strategie.</p>
+            <p>• Fasada - umożliwia łatwiejsze korzystanie z złożonych systemów poprzez udostępnienie uproszczonego interfejsu użytkownika. Fasada pozwala ukryć szczegóły implementacyjne systemu za jednym, prostym interfejsem, co ułatwia jego obsługę. W ten sposób, zamiast korzystać z kilku skomplikowanych klas, użytkownik może używać jednej prostej klasy fasady. Fasada może też służyć jako punkt wejścia do systemu dla innych modułów.</p><br><br>
         </div>
     </div>
         
@@ -70,28 +80,3 @@ $(document).ready(function()
     })
 
 </script>
-
-<style>
-    #big
-    {
-        height: 400px;
-        border: 2px solid black;
-    }
-
-    .small
-    {
-        height: 75px;
-        opacity: 0.3;
-    }
-    .small:hover
-    {
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    #name
-    {
-        font-size: 20px;
-        padding: 5px;
-    }
-</style>
